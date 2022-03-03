@@ -4,7 +4,7 @@ import MyContext from '../context/MyContext';
 // Para criar a tabela eu pesquisei no Google como criar tabelas HTML, link:
 // https://www.w3schools.com/html/html_tables.asp
 function TableWars() {
-  const { data: { results } } = useContext(MyContext);
+  const { filterData } = useContext(MyContext);
 
   return (
     <table>
@@ -26,7 +26,7 @@ function TableWars() {
         </tr>
       </thead>
       <tbody>
-        {results !== undefined ? results.map((result, index) => (
+        { filterData.map((result, index) => (
           <tr key={ index }>
             <td>{ result.name }</td>
             <td>{ result.rotation_period }</td>
@@ -42,7 +42,7 @@ function TableWars() {
             <td>{ result.edited }</td>
             <td>{ result.url }</td>
           </tr>
-        )) : null }
+        )) }
       </tbody>
     </table>
   );
