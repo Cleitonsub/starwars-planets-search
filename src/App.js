@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import HomeWars from './component/HomeWars';
+import HomeWars from './pages/HomeWars';
 import PlanetsProvider from './context/PlanetsProvider';
 
 function App() {
